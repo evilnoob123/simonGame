@@ -10,7 +10,7 @@ var checkStart = 'false';
 $("#level-correct").css("opacity", "0");
 
 //start game on 1st key press
-$(document).on('keypress', function(){
+$("h1").click(function (){
     if (checkStart != 'true'){
         nextSequence();
         checkStart = 'true';
@@ -77,7 +77,7 @@ function checkAnswer(){
         } else {
             //wrong answer
             console.log("wrong at Level " + Level);
-            $("h1").text("Game Over at level " + Level + ", press any key to restart.");
+            $("h1").text("Game Over! Click to restart.");
             $("body").addClass("game-over");
             setTimeout(function() {
                 $("body").removeClass("game-over");
